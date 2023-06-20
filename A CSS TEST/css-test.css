@@ -1,0 +1,107 @@
+.blue-div {
+  background-color: blue;
+  height: 100px;
+  border: 10px solid black;
+}
+
+.red-div {
+  background-color: red;
+  /* height: 150px; */
+  border: 10px solid black;
+}
+
+#top-red-div {
+  height: 100px;
+  width: 200px;
+  background-color: red;
+}
+
+#middle-white-div {
+  position: absolute;
+  height: 200px;
+  width: 150px;
+  background-color: white;
+  left: 120px;
+  bottom: 40px;
+}
+
+#bottom-red-div {
+  height: 100px;
+  width: 200px;
+  background-color: red;
+  position: absolute;
+  bottom: 0px;
+  left: 200px;
+}
+
+#top-red-div-2 {
+  position: absolute;
+  height: 100px;
+  width: 200px;
+  background-color: red;
+  right: -100px;
+  top: 0px;
+}
+
+#bottom-red-div-2 {
+  height: 100px;
+  width: 200px;
+  background-color: red;
+  position: absolute;
+  bottom: 0px;
+  right: -300px;
+}
+
+#star {
+  position: absolute;
+  right: 0px;
+
+  display: inline-block;
+  width: 0;
+  height: 0;
+
+  margin-left: 0.9em;
+  margin-right: 0.9em;
+  margin-bottom: 1.2em;
+
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.7em solid #fc0;
+  border-left: 0.3em solid transparent;
+
+  font-size: 40px;
+
+  &:before,
+  &:after {
+    content: "";
+
+    display: block;
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    top: 0.6em;
+    left: -1em;
+
+    border-right: 1em solid transparent;
+    border-bottom: 0.7em solid #fc0;
+    border-left: 1em solid transparent;
+
+    transform: rotate(-35deg);
+  }
+
+  &:after {
+    transform: rotate(35deg);
+  }
+}
+
+.star-text {
+  transform: rotate(25deg);
+  font-size: 25px;
+  font-weight: bold;
+
+  position: relative;
+  left: -100px;
+  z-index: 1;
+
+  text-shadow: 2px 2px 3px black;
+}
