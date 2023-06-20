@@ -1,6 +1,7 @@
-select item from asset
-where user_id = 'zaki';
+SELECT item FROM asset
+WHERE user_id = 'zaki';
 
-select u.user_id, a.item as items
-from users u
-join asset a on a.user_id = u.user_id;
+SELECT u.user_id, STRING_AGG(a.item, ', ') AS items
+FROM users u
+JOIN asset a ON a.user_id = u.user_id
+GROUP BY u.user_id;
